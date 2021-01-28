@@ -1,0 +1,155 @@
+body {
+  background: #f2f2f2;
+}
+
+#loadingStuff{
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loadingMan{
+  height: 200px;
+}
+
+#loadingGif{
+  height: 100px;
+}
+
+.container {
+  display: flex;
+}
+
+/* ------------------- FILTERS ------------------- */
+
+.filter-section {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  padding-left: 32px;
+}
+
+
+.filters {
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter {
+  border: none;
+  border-radius: 25px;
+  padding: 12px 0;
+  font-size: 14px;
+  width: 140px;
+  background-color: #ffffff;
+  color: #333333;
+  text-align: centre;
+  font-family: Avenir, 'Nunito Sans';
+  display: block;
+  margin: 4px auto;
+}
+
+.show-all:hover, .show-all.active {
+  background-color: #f2f2f2;
+}
+
+.on-the-trail:hover, .on-the-trail.active, #on-the-trail {
+  background-color: #d9f6c9;
+}
+
+.sleep:hover, .sleep.active, #sleep {
+  background-color: #d2dffb;
+}
+
+.cook:hover, .cook.active, #cook {
+  background-color: #faebbc;
+}
+
+.clothing:hover, .clothing.active, #clothing {
+  background-color: #F4DDE4;
+}
+
+.personal-care:hover, .personal-care.active, #personal-care {
+  background-color: #D6EFFC;
+}
+
+.valuables:hover, .valuables.active, #valuables {
+  background-color: #CDF4E9;
+}
+
+/* ------------------- GRID ------------------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 224px;
+  grid-gap: 32px;
+  flex-grow: 1;
+  padding: 56px;
+  background: #f2f2f2;
+}
+
+@media(max-width: 1300px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 1000px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 800px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------- CARD ------------------- */
+
+/* Background / borders of small cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: solid 2px white;
+}
+
+.card:hover {
+  border: solid 2px #D0D0D0;
+  cursor: pointer;
+}
+
+/* Filter label */
+.card h5 {
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 4px 12px;
+  margin: 8px;
+  font-weight: normal;
+  display: inline-block
+}
+
+/* Gear image */
+.card img {
+  height: 132px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Gear text */
+.card h3 {
+  text-align: center;
+}

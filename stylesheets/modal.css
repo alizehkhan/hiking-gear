@@ -1,0 +1,129 @@
+
+/*-------------------------------MODAL BACKGROUND-------------------------------*/
+
+.modal {
+  display: none; /* Hidden by default*/
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+.left {
+  position: absolute;
+  top:40%;
+  left: 0%;
+}
+
+.right {
+  position: absolute;
+  right: 0%;
+  top: 40%;
+}
+
+.left:hover {
+  cursor: pointer;
+}
+
+.right:hover {
+  cursor: pointer;
+}
+
+/*----------------------------------MODAL CARD----------------------------------*/
+
+.modal-card {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 15px 30px;
+  width: 800px;
+  display: grid;
+  position: relative;
+  grid-template-columns: 40% 60%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 50px #2f2f2f;
+  height: 480px;
+}
+
+/*----------------gear details----------------*/
+.modal-details {
+  margin-left: 10px;
+}
+
+/* category */
+.modal-details h5 {
+  font-size: 12px;
+  color: #2f2f2f;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  font-weight: normal;
+  background-color: #d2dffb;
+  display: inline-block;
+}
+
+.modal-details img {
+  width: 280px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+}
+
+.modal-details h3 {
+  line-height: 0px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+.modal-details p {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.buy {
+  background-color: #A83D3D;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px #B0B0B0;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.buy:hover {
+  cursor: pointer;
+  background: #333333;
+}
+
+.modal-details h6 {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #333333;
+  line-height: 25px;
+  display: inline;
+  margin-left: 10px;
+}
+
+/* ----------------Gear description---------------- */
+
+.modal-description {
+  overflow: auto;
+  padding: 20px 40px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  width: 360px;
+  max-height: 400px;
+}
