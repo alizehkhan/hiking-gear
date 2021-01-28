@@ -1,0 +1,47 @@
+@import url(filter-widget.css);
+@import url(card.css);
+@import url(grid.css);
+@import url(modal.css);
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-weight: 300;
+  src: url('../vendors/google-fonts/NunitoSans-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-weight: 700;
+  src: url('../vendors/google-fonts/NunitoSans-Bold.ttf');
+}
+
+body {
+  font-family: Avenir, 'Nunito Sans';
+  color: #333333;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+h3 {
+  font-size: 14px;
+  letter-spacing: 1.4px;
+}
+
+p {
+  font-size: 14px;
+  color: #2f2f2f;
+  line-height: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}

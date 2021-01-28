@@ -1,0 +1,62 @@
+.filter-section {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  padding-left: 32px;
+}
+
+.filters {
+  padding: 24px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter {
+  border: none;
+  border-radius: 25px;
+  padding: 12px 0;
+  font-size: 14px;
+  width: 140px;
+  background-color: white;
+  color: #333333;
+  text-align: centre;
+  font-family: Avenir, 'Nunito Sans';
+  display: block;
+  margin: 4px auto;
+}
+
+.show-all:hover, .show-all.active {
+  background-color: #f2f2f2;
+}
+
+.on-the-trail:hover, .on-the-trail.active, #on-the-trail {
+  background-color: #d9f6c9;
+}
+
+.sleep:hover, .sleep.active, #sleep {
+  background-color: #d2dffb;
+}
+
+.cook:hover, .cook.active, #cook {
+  background-color: #faebbc;
+}
+
+.clothing:hover, .clothing.active, #clothing {
+  background-color: #F4DDE4;
+}
+
+.personal-care:hover, .personal-care.active, #personal-care {
+  background-color: #D6EFFC;
+}
+
+.valuables:hover, .valuables.active, #valuables {
+  background-color: #CDF4E9;
+}
