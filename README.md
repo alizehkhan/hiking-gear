@@ -8,5 +8,5 @@ My up-to-date hiking gear list for multi-day treks
 
 ## Authors
 
-* [**Alizeh Khan**)](https://github.com/alizehkhan)
+* [**Alizeh Khan**](https://github.com/alizehkhan)
 * [**Seyhan Van Khan**](https://github.com/seyhanvankhan)
