@@ -58,9 +58,9 @@ fetch("https://23285.wayscript.io")
                   <p class="modal-price-weight">`+ price +` `+ weight +`</p>
                 </div>
               </div>
-              <p class="modal-right">`+ longDescription +`</p>
-              `+ buttonCode +`
-            </div>
+              <p class="modal-right">`+ longDescription +`</p>`
+              + buttonCode +
+            `</div>
           </div>`;
       }
 
