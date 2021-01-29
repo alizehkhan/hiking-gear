@@ -103,6 +103,8 @@ function changeFilter(clickedFilterBtn) {
 
 
 function changeModalTo(newModalID) {
+  document.body.style.overflow = "hidden";
+
   currentModalInput = document.getElementById('openModalID');
   if (currentModalInput.value !== '0') { // if a modal is already open, hide it
     document.getElementById(currentModalInput.value).style.display = "none";
@@ -139,6 +141,7 @@ function goToNextModal(direction) {
 window.onclick = function(event) {
   if (event.target.id == document.getElementById("openModalID").value || event.target.id.includes("close-modal")) {
     changeModalTo('0');
+    document.body.style.overflow = "visible";
   }
 }
 
