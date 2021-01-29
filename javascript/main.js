@@ -18,7 +18,7 @@ fetch("https://23285.wayscript.io")
       brandName = hikingGear[i]['b'];
       productName = hikingGear[i]['n'];
       price =  hikingGear[i]['c']  !== "" ? '£' + hikingGear[i]['c'] : "";
-      weight = hikingGear[i]['w'] !== "" ? hikingGear[i]['w'] + 'G' : "";
+      weight = hikingGear[i]['w'] !== "" ? ' | ' + hikingGear[i]['w'] + 'g' : "";
       longDescription = hikingGear[i]['d'].replace(/\n/g, "<br>");
 
       buttonCode = hikingGear[i]['u'] !== '' ?
@@ -44,17 +44,23 @@ fetch("https://23285.wayscript.io")
               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </div>
             <div class="modal-card">
+              <svg id="close-modal" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path id="close-modal-path" stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line id="close-modal-line1" x1="18" y1="6" x2="6" y2="18" />
+                <line id="close-modal-line2" x1="6" y1="6" x2="18" y2="18" />
+              </svg>
               <div class="modal-left">
                 <p class="card-category" id="` + filterCategoryID + `">` + filterCategoryName + `</p>
                 <div class="modal-left-info">
                   <img class="modal-card-image" src="` + imageFilename + `">
-                  <p class="modal-card-itemname">` + itemName + `</p>
-                  <p class="modal-card-info"><b>` + brandName + `</b> ` + productName +`<br>`+ price +`<br>`+ weight +`</p>
+                  <p class="modal-card-name">` + itemName + `</p>
+                  <p class="modal-card-brand"><b>` + brandName + `</b> ` + productName +`</p>
+                  <p class="modal-price-weight">`+ price +` `+ weight +`</p>
                 </div>
               </div>
-              <p class="modal-right">`+ longDescription +`</p>`
-              + buttonCode +
-            `</div>
+              <p class="modal-right">`+ longDescription +`</p>
+              `+ buttonCode +`
+            </div>
           </div>`;
       }
 
@@ -131,9 +137,11 @@ function goToNextModal(direction) {
 
 // close modal
 window.onclick = function(event) {
-  if (event.target.id == document.getElementById("openModalID").value)
+  if (event.target.id == document.getElementById("openModalID").value || event.target.id.includes("close-modal")) {
     changeModalTo('0');
+  }
 }
+
 
 // detects when keyboard key goes UP
 document.onkeyup = function(e) {
