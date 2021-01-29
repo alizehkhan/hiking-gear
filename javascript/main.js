@@ -103,14 +103,14 @@ function changeFilter(clickedFilterBtn) {
 
 
 function changeModalTo(newModalID) {
-  document.body.style.overflow = "hidden";
-
   currentModalInput = document.getElementById('openModalID');
   if (currentModalInput.value !== '0') { // if a modal is already open, hide it
+    document.body.style.overflow = "visible";
     document.getElementById(currentModalInput.value).style.display = "none";
   }
   currentModalInput.value = newModalID;
   if (newModalID !== '0') { // if a new modal needs to be shown
+    document.body.style.overflow = "hidden";
     document.getElementById(newModalID).style.display = 'flex';
     // show/hide left & right arrows
     document.getElementById(newModalID).children[0].style.display = nextModalExists(-1) ? "flex" : "none";
@@ -141,7 +141,6 @@ function goToNextModal(direction) {
 window.onclick = function(event) {
   if (event.target.id == document.getElementById("openModalID").value || event.target.id.includes("close-modal")) {
     changeModalTo('0');
-    document.body.style.overflow = "visible";
   }
 }
 
