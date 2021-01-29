@@ -18,7 +18,7 @@ fetch("https://23285.wayscript.io")
       brandName = hikingGear[i]['b'];
       productName = hikingGear[i]['n'];
       price =  hikingGear[i]['c']  !== "" ? '£' + hikingGear[i]['c'] : "";
-      weight = hikingGear[i]['w'] !== "" ? hikingGear[i]['w'] + 'G' : "";
+      weight = hikingGear[i]['w'] !== "" ? hikingGear[i]['w'] + 'g' : "";
       longDescription = hikingGear[i]['d'].replace(/\n/g, "<br>");
 
       buttonCode = hikingGear[i]['u'] !== '' ?
