@@ -1,7 +1,8 @@
 .card {
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 16px;
   border: solid 2px white;
+  padding: 8px;
 }
 
 .card:hover {
@@ -9,24 +10,24 @@
   cursor: pointer;
 }
 
-/* Filter label */
-.card h5 {
+.card-category {
   font-size: 12px;
-  border-radius: 15px;
+  border-radius: 16px;
   padding: 4px 12px;
-  margin: 8px;
-  font-weight: normal;
-  display: inline-block
+  display: inline-block;
+  margin: 0;
 }
 
-/* Gear image */
-.card img {
+.card-image {
   height: 132px;
   display: block;
   margin: 0 auto;
+  margin-top: 8px;
 }
 
-/* Gear text */
-.card h3 {
+.card-itemname {
   text-align: center;
+  letter-spacing: 1.4px;
+  font-weight: bold;
+  font-size: 14px;
 }

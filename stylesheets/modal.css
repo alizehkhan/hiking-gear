@@ -8,20 +8,21 @@
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+  background: rgba(0,0,0,0.6); /* Black w/ opacity */
 }
 
 .left {
   position: absolute;
   top:40%;
   left: 0%;
+  z-index: 2;
 }
 
 .right {
   position: absolute;
   right: 0%;
   top: 40%;
+  z-index: 2;
 }
 
 .left:hover {
@@ -32,73 +33,66 @@
   cursor: pointer;
 }
 
-/*----------------------------------MODAL CARD----------------------------------*/
+/*----------------------------------MODAL GRID----------------------------------*/
 
 .modal-card {
-  background-color: #ffffff;
-  margin: auto;
-  padding: 15px 30px;
   width: 800px;
   display: grid;
+  grid-template-columns: 40% 57%;
+  grid-gap: 24px;
+  padding: 32px 40px;
+  background: white;
+  margin: auto;
   position: relative;
-  grid-template-columns: 40% 60%;
-  border-radius: 10px;
-  box-shadow: 5px 5px 50px #2f2f2f;
-  height: 480px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 56px #333333;
+  height: 440px;
 }
 
-/*----------------gear details----------------*/
-.modal-details {
-  margin-left: 10px;
+@media(max-width: 900px) {
+  .modal-card {
+    grid-template-columns: 1fr;
+    height: 80vh;
+    overflow: auto;
+    width: 90vw;
+  }
 }
 
-/* category */
-.modal-details h5 {
-  font-size: 12px;
-  color: #2f2f2f;
-  border-radius: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: center;
-  font-weight: normal;
-  background-color: #d2dffb;
-  display: inline-block;
-}
+/*----------------------------------MODAL LEFT----------------------------------*/
 
-.modal-details img {
+.modal-card-image {
   width: 280px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -10px;
+  margin-top: 24px;
 }
 
-.modal-details h3 {
-  line-height: 0px;
-  margin-top: 20px;
+.modal-card-itemname {
+  line-height: 0;
+  margin: 24px 0;
   text-align: center;
   font-size: 20px;
-  letter-spacing: 4px;
+  letter-spacing: 0.15em;
+  font-weight: bold;
 }
 
-.modal-details p {
+.modal-card-info {
   text-align: center;
-  font-size: 12px;
-  letter-spacing: 1.5px;
+  line-height: 1.5em
 }
 
 .buy {
   background-color: #A83D3D;
   border: none;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
   box-shadow: 5px 5px 10px #B0B0B0;
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  bottom: 32px;
+  left: 32px;
+}
+
+.modal-left-info {
+  text-align: center;
 }
 
 .buy:hover {
@@ -106,23 +100,13 @@
   background: #333333;
 }
 
-.modal-details h6 {
-  font-size: 20px;
-  font-weight: bolder;
-  color: #333333;
-  line-height: 25px;
-  display: inline;
-  margin-left: 10px;
-}
+/*----------------------------------MODAL RIGHT----------------------------------*/
 
-/* ----------------Gear description---------------- */
-
-.modal-description {
+.modal-right {
   overflow: auto;
-  padding: 20px 40px;
-  margin: auto;
-  border-radius: 10px;
+  border-radius: 16px;
   background-color: #f2f2f2;
-  width: 360px;
-  max-height: 400px;
+  padding: 32px 40px;
+  margin: auto;
+  max-height: 85%;
 }

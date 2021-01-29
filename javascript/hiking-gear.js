@@ -15,8 +15,8 @@ fetch("https://23285.wayscript.io")
       filterCategoryName = hikingGear[i]['f'];
       filterCategoryID = filterCategoryName.toLowerCase().replace(/ /g, "-");
       itemName = hikingGear[i]['i'].toUpperCase();
-      brandName = hikingGear[i]['b'].toUpperCase();
-      productName = hikingGear[i]['n'].toUpperCase();
+      brandName = hikingGear[i]['b'];
+      productName = hikingGear[i]['n'];
       price =  hikingGear[i]['c']  !== "" ? '£' + hikingGear[i]['c'] : "";
       weight = hikingGear[i]['w'] !== "" ? hikingGear[i]['w'] + 'G' : "";
       longDescription = hikingGear[i]['d'].replace(/\n/g, "<br>");
@@ -32,9 +32,9 @@ fetch("https://23285.wayscript.io")
         // and dump/add that code onto cardHTML
         cardHTML += `
           <div onclick="changeModalTo('` + hikingGear[i]['a'].toString() + `Modal');" class="card">
-            <h5 id="` + filterCategoryID + `">` + filterCategoryName + `</h5>
-            <img src="` + imageFilename + `">
-            <h3>` + itemName + `</h3>
+            <p id="` + filterCategoryID + `" class="card-category">` + filterCategoryName + `</p>
+            <img src="` + imageFilename + `" class="card-image">
+            <p class="card-itemname">` + itemName + `</p>
           </div>
           <div id="` + hikingGear[i]['a'].toString() + `Modal" data-filter="`+filterCategoryID+`" class="modal">
             <div onclick="goToNextModal(-1);" class="left">
@@ -44,24 +44,15 @@ fetch("https://23285.wayscript.io")
               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </div>
             <div class="modal-card">
-              <div class="modal-details">
-                <h5 id="` + filterCategoryID + `">` + filterCategoryName + `</h5>
-                <br>
-                <img src="` + imageFilename + `">
-                <h3>` + itemName + `</h3>
-                <p>
-                  <b>` + brandName + `</b> ` + productName +
-                 `<br>`
-                   + price +
-                 `<br>`
-                  + weight +
-               `</p>
+              <div class="modal-left">
+                <p class="card-category" id="` + filterCategoryID + `">` + filterCategoryName + `</p>
+                <div class="modal-left-info">
+                  <img class="modal-card-image" src="` + imageFilename + `">
+                  <p class="modal-card-itemname">` + itemName + `</p>
+                  <p class="modal-card-info"><b>` + brandName + `</b> ` + productName +`<br>`+ price +`<br>`+ weight +`</p>
+                </div>
               </div>
-              <div class="modal-description">
-                <p>`
-                  + longDescription +
-               `</p>
-              </div>`
+              <p class="modal-right">`+ longDescription +`</p>`
               + buttonCode +
             `</div>
           </div>`;
@@ -73,7 +64,7 @@ fetch("https://23285.wayscript.io")
 });
 
 
-/* ################################# FILTER ################################# */
+/* ---------------------------------- FILTER ---------------------------------- */
 
 
 function changeFilter(clickedFilterBtn) {
