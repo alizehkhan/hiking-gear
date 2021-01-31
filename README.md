@@ -1,5 +1,5 @@
-# [Hiking Gear](https://hiking-gear.netlify.app)
-My up-to-date hiking gear list for multi-day treks
+# [Alizeh's Hiking Gear List](https://hiking-gear.netlify.app)
+My up to date list of gear for long distance solo hiking.
 
 ## Integrations
 * [**Airtable API**](https://airtable.com/api) to dynamically create hiking gear cards
